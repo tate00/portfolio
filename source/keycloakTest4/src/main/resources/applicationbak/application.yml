@@ -1,0 +1,17 @@
+spring:
+    security:
+        saml2:
+            relyingparty:
+                registration:
+                    my-client:
+                        entity-id: /apply/my-client
+                        signing:
+                            credentials:
+                            - private-key-location: classpath:credentials/local.key
+                              certificate-location: classpath:credentials/local.crt
+                        assertingparty:
+                          metadata-uri: https://www.tatesite.com:8443/realms/Hello_keycloak/protocol/saml/descriptor
+                          
+server:
+  servlet:
+    context-path: /apply                               
