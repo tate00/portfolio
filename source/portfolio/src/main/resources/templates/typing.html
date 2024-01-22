@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>タイピングゲーム</title>
+<link th:href="@{/typing.css}"  rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script type="text/javascript"  th:src="@{/js/site.js}"></script>
+</head>
+<body style="background-color: #eee;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.tatesite.com/apply/hello">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://www.tatesite.com/apply/hello">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container table-tyousei">
+<!-- 対戦エリア -->
+<table class="table table-bordered table-tyousei ">
+  <thead class="table-light">
+    <tr>
+      <th scope="col" >問題文</th>
+      <th scope="col" >残り時間</th>
+      <th scope="col" >成績</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-row">
+      <td class="col-md-9 table-mondaibun">
+        <p id="startNihongo" class="table-text"></p>
+      	<p id="start" class="table-text">スペースキーを押してください。</p>
+      	<p id="start2" class="text2 table-text"></p>
+      </td>
+      <td class="col-md-1 table-score"><p id="time" class="time">10秒</p></td>
+      <td class="col-md-2 table-score"><p id="score" class="score">打鍵数:0</p><p id="speed" class="speed">打鍵/秒:0</p><p id="miss" class="miss">ミス：0</p></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
